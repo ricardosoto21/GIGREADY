@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DJ_PLAYLISTS Version="1.0.0">
+  <PRODUCT Name="GigReady" Version="1.0.0" Company="GigReady"/>
+  <COLLECTION Entries="1">
+    <TRACK TrackID="1" Name="track-1.mp3" Artist="" Album="" Genre="" Kind="MP3 File" Size="1000000" TotalTime="300" AverageBpm="128.00" BitRate="0" SampleRate="44100" Location="file://localhost/C:/Music/track-1.mp3" Comments="Imported from GigReady" Tonality="">
+
+    </TRACK>
+  </COLLECTION>
+  <PLAYLISTS>
+    <NODE Type="0" Name="ROOT" Count="1">
+      <NODE Name="GigReady" Type="1" KeyType="0" Entries="1">
+        <TRACK Key="1"/>
+      </NODE>
+    </NODE>
+  </PLAYLISTS>
+</DJ_PLAYLISTS>

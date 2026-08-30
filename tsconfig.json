@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "declaration": true,
+    "declarationMap": false,
+    "sourceMap": false,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["app/src/*"],
+      "@backend/*": ["app/backend/*"],
+      "@electron/*": ["app/electron/*"],
+      "@types/*": ["app/src/types/*"]
+    }
+  },
+  "include": ["app/src/**/*", "app/src/vite-env.d.ts"],
+  "exclude": ["node_modules", "dist", "release"]
+}

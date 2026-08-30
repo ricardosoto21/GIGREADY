@@ -1,0 +1,123 @@
+{
+  "name": "GigReady",
+  "version": "Versión 1.0",
+  "generatedAt": "26 de junio de 2026",
+  "colors": [
+    {
+      "name": "Stage Black",
+      "hex": "#080A0E",
+      "rgb": "8, 10, 14",
+      "cmyk": "43, 29, 0, 95",
+      "role": "Base premium",
+      "use": "Fondos principales, portada, navegación dark, mockups y piezas de alto impacto."
+    },
+    {
+      "name": "Ready White",
+      "hex": "#F7F8F6",
+      "rgb": "247, 248, 246",
+      "cmyk": "0, 0, 1, 3",
+      "role": "Luz editorial",
+      "use": "Fondos claros, documentación, áreas de lectura larga y superficies de producto."
+    },
+    {
+      "name": "Pulse Cyan",
+      "hex": "#47F4E6",
+      "rgb": "71, 244, 230",
+      "cmyk": "71, 0, 6, 4",
+      "role": "Acento propietario",
+      "use": "Acciones principales, estados activos, highlights de análisis y detalles del logotipo."
+    },
+    {
+      "name": "Wave Blue",
+      "hex": "#246BFD",
+      "rgb": "36, 107, 253",
+      "cmyk": "86, 58, 0, 1",
+      "role": "Información",
+      "use": "Datos, enlaces, gráficas secundarias, comparaciones y módulos técnicos."
+    },
+    {
+      "name": "Signal Green",
+      "hex": "#19C37D",
+      "rgb": "25, 195, 125",
+      "cmyk": "87, 0, 36, 24",
+      "role": "Preparado",
+      "use": "Estados correctos, archivos listos, confirmaciones y progreso completado."
+    },
+    {
+      "name": "Cue Amber",
+      "hex": "#FFB84D",
+      "rgb": "255, 184, 77",
+      "cmyk": "0, 28, 70, 0",
+      "role": "Atención",
+      "use": "Advertencias, cues pendientes, revisión recomendada y contenido promocional cálido."
+    },
+    {
+      "name": "Peak Magenta",
+      "hex": "#FF4FD8",
+      "rgb": "255, 79, 216",
+      "cmyk": "0, 69, 15, 0",
+      "role": "Energía selectiva",
+      "use": "Momentos de alta energía, visualizaciones de drop y piezas sociales de campaña."
+    },
+    {
+      "name": "Risk Red",
+      "hex": "#E84A5F",
+      "rgb": "232, 74, 95",
+      "cmyk": "0, 68, 59, 9",
+      "role": "Error",
+      "use": "Errores críticos, archivos corruptos, acciones bloqueadas y alertas importantes."
+    },
+    {
+      "name": "Graphite 700",
+      "hex": "#2A2F36",
+      "rgb": "42, 47, 54",
+      "cmyk": "22, 13, 0, 79",
+      "role": "Neutral oscuro",
+      "use": "Texto sobre fondos claros, bordes dark y paneles de soporte."
+    },
+    {
+      "name": "Mist 200",
+      "hex": "#D9DEE3",
+      "rgb": "217, 222, 227",
+      "cmyk": "4, 2, 0, 11",
+      "role": "Neutral claro",
+      "use": "Bordes, divisores, tablas, fondos de estado neutro y documentación."
+    }
+  ],
+  "typography": {
+    "primary": [
+      "Inter",
+      "SF Pro",
+      "Segoe UI",
+      "system-ui",
+      "sans-serif"
+    ],
+    "secondary": [
+      "Manrope",
+      "Aptos",
+      "Inter",
+      "sans-serif"
+    ],
+    "mono": [
+      "SFMono-Regular",
+      "IBM Plex Mono",
+      "Consolas",
+      "monospace"
+    ]
+  },
+  "spacing": [
+    4,
+    8,
+    12,
+    16,
+    24,
+    32,
+    48,
+    64
+  ],
+  "radius": {
+    "badge": 4,
+    "component": 6,
+    "editorial": 8
+  }
+}

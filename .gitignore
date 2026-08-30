@@ -1,0 +1,13 @@
+node_modules/
+dist/
+release/
+output/
+test-results/
+.tmp-tests/
+coverage/
+backups/
+*.log
+.env
+.env.*
+!.env.example
+

@@ -1,0 +1,122 @@
+{
+  "name": "gigready",
+  "version": "1.2.0-beta.1",
+  "description": "Revisa, prepara y exporta tu musica antes de tocar.",
+  "main": "dist/electron/main.js",
+  "author": "GigReady",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "dev": "concurrently \"npm run dev:vite\" \"npm run dev:electron\"",
+    "dev:vite": "vite",
+    "dev:electron": "wait-on http://localhost:5173 && electron .",
+    "build": "node scripts/clean-build.js && tsc && vite build && tsc -p tsconfig.electron.json",
+    "build:win": "npm run build && electron-builder --win",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "test:e2e": "npm run build && playwright test",
+    "lint": "eslint . --ext .ts,.tsx --max-warnings=0",
+    "typecheck": "tsc --noEmit && tsc -p tsconfig.electron.json --noEmit",
+    "check": "npm run typecheck && npm run lint && npm test",
+    "verify:ffmpeg": "node scripts/verify-ffmpeg.js",
+    "verify:ffprobe": "node scripts/verify-ffprobe.js",
+    "checksum:release": "node scripts/checksum-release.js"
+  },
+  "dependencies": {
+    "fast-glob": "^3.3.3",
+    "music-metadata": "^11.14.0",
+    "uuid": "^11.1.0",
+    "winston": "^3.17.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.61.1",
+    "@types/node": "^22.20.1",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.0.2",
+    "@vitejs/plugin-react": "^6.0.3",
+    "@vitest/coverage-v8": "^4.1.10",
+    "concurrently": "^10.0.3",
+    "electron": "43.1.1",
+    "electron-builder": "^26.15.3",
+    "eslint": "^10.7.0",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "globals": "^17.7.0",
+    "jimp": "^1.6.1",
+    "png-to-ico": "^2.1.8",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.64.0",
+    "vite": "^8.1.5",
+    "vitest": "^4.1.10",
+    "wait-on": "^9.0.10",
+    "zustand": "^5.0.14"
+  },
+  "overrides": {
+    "@babel/core": "^7.29.7",
+    "form-data": "^4.0.6",
+    "js-yaml": "^4.3.0"
+  },
+  "build": {
+    "appId": "com.gigready.app",
+    "productName": "GigReady",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "package.json",
+      "!**/*.map"
+    ],
+    "extraResources": [
+      {
+        "from": "vendor/ffmpeg/win-x64/ffmpeg.exe",
+        "to": "ffmpeg/ffmpeg.exe"
+      },
+      {
+        "from": "vendor/ffmpeg/win-x64/ffprobe.exe",
+        "to": "ffmpeg/ffprobe.exe"
+      },
+      {
+        "from": "vendor/ffmpeg/win-x64/LICENSE.txt",
+        "to": "licenses/ffmpeg/LGPL-3.0.txt"
+      },
+      {
+        "from": "THIRD_PARTY_NOTICES.md",
+        "to": "licenses/THIRD_PARTY_NOTICES.md"
+      },
+      {
+        "from": "docs/ffprobe-distribution.md",
+        "to": "licenses/ffprobe-distribution.md"
+      },
+      {
+        "from": "EULA.md",
+        "to": "licenses/EULA.md"
+      }
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "assets/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  }
+}

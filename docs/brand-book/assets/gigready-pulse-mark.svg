@@ -1,0 +1,8 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" width="220" height="220" role="img" aria-label="GigReady Pulse Mark">
+  <rect x="10" y="10" width="200" height="200" rx="38" fill="#080A0E"/>
+  <path d="M72 147c-18 0-32-12-32-28s14-28 32-28h18V50" fill="none" stroke="#F7F8F6" stroke-width="10" stroke-linecap="square" stroke-linejoin="miter"/>
+  <path d="M90 50h34l25 25v32l-59-49" fill="none" stroke="#F7F8F6" stroke-width="10" stroke-linecap="square" stroke-linejoin="miter"/>
+  <path d="M88 147l29-53 35 79 36-119 22 70h32" fill="none" stroke="#47F4E6" stroke-width="10" stroke-linecap="square" stroke-linejoin="miter"/>
+  <path d="M150 173l29-58 21 47 19-38" fill="none" stroke="#F7F8F6" stroke-width="7" stroke-linecap="square" stroke-linejoin="miter" opacity="0.95"/>
+</svg>
